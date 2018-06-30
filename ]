@@ -1,0 +1,56 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+void main()
+{	
+	char word[100];
+	int len;
+	int errorCount;
+	int i, j;
+	char xWord[100];
+	char guess;
+	int x;	
+	printf("Please enter a word for the game:\n");
+	scanf("%s\n",word);
+	len = strlen(word);
+	printf("Please give the computer to your friend to play the game.\n\n\n\n\n\n\n");
+	printf("You will have 6 letter guesses to find the word.\n");
+	printf("The word is %d long\nwhat is your first guess?\n", len);
+	for (i=0; i < len-1; i++)
+	{
+	   word[i] = tolower(word[i]);
+	}
+	
+	for (i = 0; i < len; i++)
+	{
+	   xWord[i] = '-';
+	  
+	}
+	xWord[i] = 0;
+	
+	for(j = 6; j > 0; j-- )
+	  {
+	     
+	     printf("%s\n", xWord);
+	     printf("What is your next guess?\n");
+	   scanf("%c", &guess);
+	     for( i = 0; i < len; i++)
+			{
+			
+			
+			 if (guess == word[i])
+			    {
+				
+				xWord[i] = word[i];
+				x++;
+				printf("%s\n", xWord);
+			    }
+		
+			}
+	   }		
+	if (j = 0) 
+	   {
+		printf("Sorry but you failed the game and Mr. Hangman died :'(\nIf only you were smarter he would've lived");
+	   }
+
+}

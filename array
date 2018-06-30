@@ -1,0 +1,54 @@
+#include <stdlib.h>
+#include <stdio.h>
+#define MAX_SIZE 100
+void main()
+{
+
+	double data[MAX_SIZE];
+	double val;
+	int count = 0;
+	int i;
+
+	printf("Enter a double");
+	scanf("%lf", &val);
+	while(val >= 0.0 && count < MAX_SIZE)
+	{
+	 count++;
+	 printf("Enter a double");
+	 scanf("%lf",&val); 
+	}
+
+
+
+	int where = -1;	
+	double target;
+	printf("Enter target:");
+	scanf("%lf", & target):
+	
+	int left = 0;
+	int right = count - 1;
+	
+	while (left <= right && where == -1)
+	{
+	  middle = (left + right) /2;
+	  if (data[middle] == target) 
+	  {
+	    where = middle;
+	  }
+	  if (data[middle] > target ) 
+	  {
+	    right = middle - 1;
+	  }
+	  else 
+	  {
+	    left = middle + 1;
+	  }
+	}
+	if (where < 0.0)
+	{
+	  printf("Not found.\n");
+	}
+
+	
+}
+	
